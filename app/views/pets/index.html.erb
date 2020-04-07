@@ -1,0 +1,8 @@
+<h1>Pets</h1>
+<ul>
+ <% @pets.each do |pet| %>
+  <li><%= link_to pet.name, pet_path(pet) %> - <%= pet.species.capitalize %></li>
+ <% end %>
+</ul>
+
+<%= link_to "Add new Pet", new_pet_path %>

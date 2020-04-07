@@ -1,0 +1,19 @@
+<h1 class="font-color">Show Page</h1>
+
+<h2><%= @pet.name %></h2>
+
+<p>Species: <%= @pet.species.capitalize %></p>
+<p>Age: <%= @pet.age %></p>
+<p>Found On: <%= @pet.found_on %></p>
+
+<%= link_to pets_path do %>
+  <i class="fas fa-backward"></i>
+<% end %>
+<%= link_to edit_pet_path(@pet) do %>
+ <i class="far fa-edit"></i>
+<% end %>
+<%= link_to pet_path(@pet), method: :delete, data: {confirm: "Are you sure?"} do %>
+  <i class="fas fa-dumpster"></i>
+  <!-- becomes a link -->
+<% end %>
+
